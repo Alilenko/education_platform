@@ -12,6 +12,7 @@ const CalendarWrapper = styled.div`
   background: #ededed;
   border-radius: 20px;
   border: 1px solid #ededed;
+  margin: 0 auto;
 `;
 const Content = styled.div`
   display: grid;
