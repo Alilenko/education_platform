@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/education_platform/static/css/main.e6c13ad2.css",
+    "main.js": "/education_platform/static/js/main.09f212a6.js",
+    "index.html": "/education_platform/index.html",
+    "main.e6c13ad2.css.map": "/education_platform/static/css/main.e6c13ad2.css.map",
+    "main.09f212a6.js.map": "/education_platform/static/js/main.09f212a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.09f212a6.js"
+  ]
+}

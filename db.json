@@ -1,0 +1,149 @@
+{
+    "events": [
+    {
+        "id": 1,
+        "title": "Лекція 1",
+        "description": "Опис лекції",
+        "date": 1670927400,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 2,
+        "title": "Лекція 2",
+        "description": "Опис лекції",
+        "date": 1671100200,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 3,
+        "title": "Лекція 3",
+        "description": "Опис лекції",
+        "date": 1671445800,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 4,
+        "title": "Лекція 4",
+        "description": "Опис лекції",
+        "date": 	1671618600,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 5,
+        "title": "Лекція 5",
+        "description": "Опис лекції",
+        "date": 1671791400,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 6,
+        "title": "Лекція 6",
+        "description": "Опис лекції",
+        "date": 	1672137000,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 7,
+        "title": "Лекція 7",
+        "description": "Опис лекції",
+        "date": 	1672309800,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 8,
+        "title": "Лекція 8",
+        "description": "Опис лекції",
+        "date": 	1641724200,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 9,
+        "title": "Прямий ефір",
+        "description": "Опис",
+        "date": 	1671273000,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "live"
+    },
+    {
+        "id": 10,
+        "title": "Прямий ефір",
+        "description": "Опис",
+        "date": 		1671800400,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "live"
+    },
+    {
+        "id": 11,
+        "title": "Лекція 11",
+        "description": "Опис лекції",
+        "date": 	1673355600 ,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 12,
+        "title": "Лекція 12",
+        "description": "Опис лекції",
+        "date": 1673528400,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 13,
+        "title": "Лекція 13 ",
+        "description": "Опис лекції",
+        "date": 	1674208800,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },   
+    {
+        "id": 131,
+        "title": "Прямий ефір",
+        "description": "Опис лекції",
+        "date": 	1674210600,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "live"
+    },
+    {
+        "id": 132,
+        "title": "Лекція ",
+        "description": "Опис лекції",
+        "date": 1674219600,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 133,
+        "title": "Лекція ",
+        "description": "Опис лекції",
+        "date": 1674219600,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    }, 
+    {
+        "id": 134,
+        "title": "Лекція 'Як побороти страх' ",
+        "description": "Опис лекції",
+        "date": 	1674232200,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "lecture"
+    },
+    {
+        "id": 14,
+        "title": "Прямий ефір",
+        "description": "Опис",
+        "date": 1673701200,
+        "link": "https://www.youtube.com/watch?v=Yr_poW-KK1Q",
+        "type": "live"
+    }
+    
+]
+}

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import moment from "moment";
+import "moment/locale/uk";
 
-export const useMomentData = (data) => {
-  moment.updateLocale("en", { week: { dow: 1 } });
-  const [today, setToday] = useState(data);
+export const useMomentData = () => {
+  moment.updateLocale("uk", {
+    week: { dow: 1 },
+  });
+  const [today, setToday] = useState(moment());
 
   const startDay = today.clone().startOf("month").startOf("week");
   const endDay = today.clone().endOf("month").endOf("week");
@@ -15,5 +18,18 @@ export const useMomentData = (data) => {
   while (daysArr.length <= totalDays) {
     daysArr.push(day.add(1, "day").clone());
   }
-  return { today, setToday, startDay, endDay, daysArr, totalDays };
+
+  const startDateQuery = startDay.clone().format("X");
+  const endDateQuery = endDay.clone().format("X");
+
+  return {
+    today,
+    setToday,
+    startDay,
+    endDay,
+    daysArr,
+    totalDays,
+    startDateQuery,
+    endDateQuery,
+  };
 };

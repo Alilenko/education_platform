@@ -1,8 +1,12 @@
 import React from "react";
-import Calendar from "./components/calendar/Calendar";
+import Schedule from "./components/schedule/Schedule";
 
 function App() {
-  return <Calendar />;
+  return (
+    <>
+      <Schedule />
+    </>
+  );
 }
 
 export default App;
