@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useTranslateMonth } from "../../hooks/useTranslateMonth";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
 const Container = styled.div`
@@ -36,17 +35,13 @@ const Month = styled.div`
 `;
 
 const CalendarHeader = ({ today, prevClick, nextClick }) => {
-  const { name } = useTranslateMonth(today.month());
-
   return (
     <Container>
-      <PrevBtn onClick={prevClick}>
+      <PrevBtn onClick={() => prevClick("months")}>
         <AiOutlineDoubleRight color="#fff" size={10} />
       </PrevBtn>
-      <Month>
-        {name} {today.format("YYYY")}
-      </Month>
-      <Button onClick={nextClick}>
+      <Month>{today.format("MMMM YYYY")}</Month>
+      <Button onClick={() => nextClick("months")}>
         <AiOutlineDoubleRight color="#fff" size={10} />
       </Button>
     </Container>

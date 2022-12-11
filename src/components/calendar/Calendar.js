@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import moment from "moment";
-import { useMomentData } from "../../hooks/useMomentData";
 import CalendarHeader from "./CalendarHeader";
 import CalendarCell from "./CalendarCell";
+import Spinner from "../Spinner/Spinner";
 
 const CalendarWrapper = styled.div`
   max-width: 1055px;
   max-height: 811px;
-  min-width: 350px;
+  min-width: 560px;
+  width: 100%;
   background: #ededed;
   border-radius: 20px;
   border: 1px solid #ededed;
@@ -16,12 +16,13 @@ const CalendarWrapper = styled.div`
 `;
 const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(80px, 1fr));
   grid-template-rows: repeat(5, 1fr);
+  position: relative;
 `;
 const WeekHeader = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(80px, 1fr));
 `;
 const WeekHeaderItem = styled.div`
   font-weight: 300;
@@ -38,18 +39,18 @@ const WeekHeaderItem = styled.div`
 
 const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"];
 
-const Calendar = () => {
-  const { today, setToday, startDay, daysArr, totalDays } = useMomentData(
-    moment()
-  );
-
-  const prevClick = () => {
-    setToday((prev) => prev.clone().subtract(1, "month"));
-  };
-  const nextClick = () => {
-    setToday((prev) => prev.clone().add(1, "month"));
-  };
-
+const Calendar = ({
+  today,
+  setToday,
+  prevClick,
+  nextClick,
+  startDay,
+  totalDays,
+  events,
+  daysArr,
+  setActive,
+  loading,
+}) => {
   return (
     <CalendarWrapper>
       <CalendarHeader
@@ -63,13 +64,17 @@ const Calendar = () => {
         ))}
       </WeekHeader>
       <Content>
+        {loading && <Spinner />}
         {daysArr.map((item) => (
           <CalendarCell
             key={item.unix()}
             dayItem={item}
             startDay={startDay}
             today={today}
+            setToday={setToday}
             totalDays={totalDays}
+            events={events}
+            setActive={setActive}
           />
         ))}
       </Content>
