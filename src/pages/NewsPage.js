@@ -1,8 +1,7 @@
 import React from "react";
-import Sidebar from "../components/sidebar/Sidebar";
 
 const NewsPage = () => {
-  return <Sidebar>NewsPage</Sidebar>;
+  return <>NewsPage</>;
 };
 
 export default NewsPage;
