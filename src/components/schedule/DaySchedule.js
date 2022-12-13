@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import moment from "moment";
-
 import { useFilterEvents } from "../../hooks/useEvents";
 import arrow from "../../assets/right-arrow 2.svg";
 
