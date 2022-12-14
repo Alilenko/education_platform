@@ -26,7 +26,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-      <RouterProvider basename="/education_platform" router={router} />
+      <RouterProvider router={router} />
     </>
   );
 }
