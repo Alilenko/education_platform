@@ -10,29 +10,11 @@ import SchedulePage from "./pages/SchedulePage";
 import UserPage from "./pages/UserPage";
 import NewsPage from "./pages/NewsPage";
 import RootLayout from "./pages/RootLayout";
-
-/*const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <SchedulePage />,
-  },
-  {
-    path: "/user",
-    element: <UserPage />,
-  },
-  {
-    path: "/news",
-    element: <NewsPage />,
-  },
-  {
-    path: "/courses",
-    element: <CoursePage />,
-  },
-]);*/
+import NotFound from "./components/error/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
       <Route index element={<SchedulePage />} />
       <Route path="/user" element={<UserPage />} />
       <Route path="/news" element={<NewsPage />} />
@@ -44,7 +26,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider basename="/education_platform" router={router} />
     </>
   );
 }
