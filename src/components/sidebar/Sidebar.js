@@ -17,17 +17,17 @@ const PageContainer = styled.div`
 
 const SidebarContainer = styled.div`
   width: ${(props) => (props.isOpen ? "300px" : "60px")};
-  transition: all 0.5s ease-in;
+  transition: ${({ theme }) => theme.transition.primary};
   position: relative;
-  @media (max-width: 676px) {
+  @media ${({ theme }) => theme.media.mobile} {
     width: ${(props) => (props.isOpen ? "300px" : "0px")};
   }
 `;
 const SidebarWrapper = styled.div`
   width: ${(props) => (props.isOpen ? "300px" : "60px")};
   height: 100%;
-  border: 1px solid #ededed;
-  transition: all 0.5s ease-in;
+  border: 1px solid ${({ theme }) => theme.colors.bg};
+  transition: ${({ theme }) => theme.transition.primary};
   display: flex;
   flex-direction: column;
   position: relative;
@@ -36,7 +36,7 @@ const SidebarWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  @media (max-width: 676px) {
+  @media ${({ theme }) => theme.media.mobile} {
     position: fixed;
     left: ${(props) => (props.isOpen ? 0 : "-300px")};
     z-index: 3;
@@ -56,9 +56,9 @@ const ToogleBtn = styled.button`
   justify-content: center;
   align-content: center;
   border: none;
-  transition: all 0.5s ease-in;
+  transition: ${({ theme }) => theme.transition.primary};
   transform: rotate(${(props) => (props.isOpen ? "180deg" : 0)});
-  @media (max-width: 676px) {
+  @media ${({ theme }) => theme.media.mobile} {
     position: fixed;
     top: 10px;
     left: 10px;
@@ -92,8 +92,8 @@ const List = styled.ul`
 const ListItem = styled.div`
   display: flex;
   align-items: center;
-  transition: all 0.3s ease-in;
-  color: #8e8e8e;
+  transition: ${({ theme }) => theme.transition.primary};
+  color: ${({ theme }) => theme.colors.darkGray};
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -101,11 +101,11 @@ const ListItem = styled.div`
   border: 1px solid transparent;
   text-decoration: none;
   &:hover {
-    color: #f8c02e;
-    border: 1px solid #f8c02e;
+    color: ${({ theme }) => theme.colors.hover};
+    border: 1px solid ${({ theme }) => theme.colors.hover};
     border-radius: 20px;
   }
-  @media (max-width: 676px) {
+  @media ${({ theme }) => theme.media.mobile} {
     transform: translateX(${(props) => (props.isOpen ? "0" : "-60px")});
     opacity: ${(props) => (props.isOpen ? "1" : "0")};
   }
@@ -120,7 +120,7 @@ const ListItemText = styled.div`
   padding: 0px 10px;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100px")});
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
-  transition: all 0.5s ease;
+  transition: ${({ theme }) => theme.transition.primary};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

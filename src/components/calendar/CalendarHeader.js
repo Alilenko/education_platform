@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: #eb4436;
+  background-color: ${({ theme }) => theme.colors.secondary};
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -31,7 +31,7 @@ const Month = styled.div`
   line-height: 29px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #eb4436;
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const CalendarHeader = ({ today, prevClick, nextClick }) => {

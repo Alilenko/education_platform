@@ -16,7 +16,7 @@ const NavButton = styled.div`
   margin-top: 10px;
   color: white;
   text-decoration: none;
-  background-color: #eb4436;
+  background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 20px;
   padding: 10px 20px;
   text-transform: uppercase;

@@ -9,9 +9,9 @@ const CalendarWrapper = styled.div`
   max-height: 811px;
   min-width: 560px;
   width: 100%;
-  background: #ededed;
+  background: ${({ theme }) => theme.colors.bg};
   border-radius: 20px;
-  border: 1px solid #ededed;
+  border: 1px solid ${({ theme }) => theme.colors.bg};
   margin: 0 auto;
 `;
 const Content = styled.div`
@@ -29,8 +29,8 @@ const WeekHeaderItem = styled.div`
   font-size: 20px;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: #eb4436;
-  border-right: 1px solid #eb4436;
+  color: ${({ theme }) => theme.colors.secondary};
+  border-right: ${({ theme }) => theme.border.secondary};
   padding-left: 20px;
   &:last-child {
     border-right: none;

@@ -7,7 +7,9 @@ export const CellWrapper = styled.div`
   min-height: 94px;
   height: 100px;
   max-width: 151px;
-  border: 1px solid ${(props) => (props.isWeekday ? "#ededed" : "#fff")};
+  border: 1px solid
+    ${(props) => (props.isWeekday ? ({ theme }) => theme.colors.bg : "#fff")};
+
   background-color: ${(props) => props.isWeekday && "#fff"};
 `;
 
@@ -37,7 +39,7 @@ const DayWrapper = styled.button`
 const CurrentDay = styled("div")`
   height: 100%;
   width: 25px;
-  background-color: #eb4436;
+  background-color: ${({ theme }) => theme.colors.secondary};
   color: #fff;
   border-radius: 50%;
   display: flex;

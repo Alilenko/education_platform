@@ -11,6 +11,8 @@ import UserPage from "./pages/UserPage";
 import NewsPage from "./pages/NewsPage";
 import RootLayout from "./pages/RootLayout";
 import NotFound from "./components/error/NotFound";
+import { ThemeProvider } from "styled-components";
+import { baseTheme } from "./theme";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +32,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={baseTheme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   );
 }

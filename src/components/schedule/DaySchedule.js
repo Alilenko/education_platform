@@ -20,7 +20,7 @@ const RightColumn = styled.div`
 `;
 const ArrowButton = styled.button`
   font-size: 18px;
-  color: ${(props) => (props.prev ? "#eb4436" : "#989898")};
+  color: ${({ theme }) => theme.colors.darkGray};
   background-color: transparent;
   display: flex;
   justify-content: space-between;
@@ -51,11 +51,11 @@ const EventsItem = styled.a`
   height: 64px;
   display: flex;
   align-items: center;
-  background-color: #ededed;
+  background-color: ${({ theme }) => theme.colors.bg};
   color: #000;
   text-decoration: none;
   padding: 5px 20px;
-  border: 1px solid #ededed;
+  border: 1px solid ${({ theme }) => theme.colors.bg};
   &:nth-child(2n + 1) {
     background-color: #fff;
   }
@@ -66,7 +66,7 @@ const EventsTime = styled.div`
 `;
 const EventsText = styled.div`
   font-size: 24px;
-  color: #8e8e8e;
+  color: ${({ theme }) => theme.colors.darkGray};
   margin-left: 20px;
 `;
 
@@ -78,7 +78,7 @@ const DaySchedule = ({ today, prevClick, nextClick, events }) => {
       <DayHeader>
         <DayName>{today.format("D MMMM")}</DayName>
         <RightColumn>
-          <ArrowButton prev onClick={() => prevClick("days")}>
+          <ArrowButton onClick={() => prevClick("days")}>
             <img
               style={{ marginRight: "20px", transform: `rotate(180deg)` }}
               src={arrow}

@@ -25,11 +25,18 @@ const Buttons = styled.div`
 `;
 const Button = styled.button`
   background-color: #fff;
-  border: 1px solid ${(props) => (props.active ? "#eb4436" : "#8E8E8E")};
+  border: ${(props) =>
+    props.active
+      ? ({ theme }) => theme.border.secondary
+      : ({ theme }) => theme.border.primary};
   border-radius: 20px;
   padding: 10px 20px;
   margin: 10px;
-  color: ${(props) => (props.active ? "#eb4436" : "#8E8E8E")};
+  color: ${(props) =>
+    props.active
+      ? ({ theme }) => theme.colors.secondary
+      : ({ theme }) => theme.colors.primary};
+  transition: ${({ theme }) => theme.transition.primary};
 `;
 
 const Schedule = () => {
