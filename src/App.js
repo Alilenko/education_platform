@@ -12,27 +12,19 @@ import NewsPage from "./pages/NewsPage";
 import RootLayout from "./pages/RootLayout";
 import NotFound from "./components/error/NotFound";
 
-/*const router = createBrowserRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
+    <Route
+      path="/education_platform/"
+      element={<RootLayout />}
+      errorElement={<NotFound />}
+    >
       <Route index element={<SchedulePage />} />
-      <Route path="/user" element={<UserPage />} />
-      <Route path="/news" element={<NewsPage />} />
-      <Route path="/courses" element={<CoursePage />} />
+      <Route path="user" element={<UserPage />} />
+      <Route path="news" element={<NewsPage />} />
+      <Route path="courses" element={<CoursePage />} />
     </Route>
   )
-);*/
-const router = createBrowserRouter(routes, {
-  basename: "/education_platform",
-});
-
-const routes = createRoutesFromElements(
-  <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
-    <Route index element={<SchedulePage />} />
-    <Route path="/user" element={<UserPage />} />
-    <Route path="/news" element={<NewsPage />} />
-    <Route path="/courses" element={<CoursePage />} />
-  </Route>
 );
 
 function App() {

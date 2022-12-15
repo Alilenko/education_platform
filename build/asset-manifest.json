@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/education_platform/static/css/main.d76925f2.css",
-    "main.js": "/education_platform/static/js/main.480372e4.js",
+    "main.js": "/education_platform/static/js/main.a45d7a84.js",
     "static/media/fatal.png": "/education_platform/static/media/fatal.50f515d7a4accb38a261.png",
     "static/media/right-arrow 2.svg": "/education_platform/static/media/right-arrow 2.000edc19c9bd4db0342f70b795c48882.svg",
     "static/media/spinner.svg": "/education_platform/static/media/spinner.e5d907fa7a56c998a5ee8cbf527a2345.svg",
     "index.html": "/education_platform/index.html",
     "main.d76925f2.css.map": "/education_platform/static/css/main.d76925f2.css.map",
-    "main.480372e4.js.map": "/education_platform/static/js/main.480372e4.js.map"
+    "main.a45d7a84.js.map": "/education_platform/static/js/main.a45d7a84.js.map"
   },
   "entrypoints": [
     "static/css/main.d76925f2.css",
-    "static/js/main.480372e4.js"
+    "static/js/main.a45d7a84.js"
   ]
 }

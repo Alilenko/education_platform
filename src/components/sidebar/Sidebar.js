@@ -130,22 +130,22 @@ const data = [
   {
     name: "Особистий кабінет",
     icon: <FaUserAlt size="20px" />,
-    link: "/user",
+    link: "/education_platform/user",
   },
   {
     name: "Календар",
     icon: <FaCalendarAlt size="20px" />,
-    link: "/",
+    link: "/education_platform/",
   },
   {
     name: "Новини",
     icon: <FaReadme size="20px" />,
-    link: "/news",
+    link: "/education_platform/news",
   },
   {
     name: "Курси",
     icon: <FaGraduationCap size="20px" />,
-    link: "/courses",
+    link: "/education_platform/courses",
   },
 ];
 
