@@ -23,7 +23,7 @@ import NotFound from "./components/error/NotFound";
   )
 );*/
 const router = createBrowserRouter(routes, {
-  basename: "/education_platform/",
+  basename: "/education_platform",
 });
 
 const routes = createRoutesFromElements(
