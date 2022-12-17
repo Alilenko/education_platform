@@ -7,7 +7,11 @@ import arrow from "../../assets/right-arrow 2.svg";
 const DayHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 600px;
+  @media ${({ theme }) => theme.media.mobile} {
+    width: 80vw;
+    min-width: 320px;
+  }
 `;
 const DayName = styled.div`
   font-weight: 700;
@@ -45,7 +49,11 @@ const EventsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
-  width: 80%;
+  width: 100%;
+  @media ${({ theme }) => theme.media.mobile} {
+    width: 80vw;
+    min-width: 320px;
+  }
 `;
 const EventsItem = styled.a`
   height: 64px;

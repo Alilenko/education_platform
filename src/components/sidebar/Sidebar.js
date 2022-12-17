@@ -19,9 +19,16 @@ const SidebarContainer = styled.div`
   width: ${(props) => (props.isOpen ? "300px" : "60px")};
   transition: ${({ theme }) => theme.transition.primary};
   position: relative;
-  @media ${({ theme }) => theme.media.mobile} {
+  flex-shrink: 0;
+  @media ${({ theme }) => theme.media.tablet} {
     width: ${(props) => (props.isOpen ? "300px" : "0px")};
+    flex-shrink: 1;
   }
+`;
+
+const Content = styled.div`
+  flex-shrink: 1;
+  width: 100%;
 `;
 const SidebarWrapper = styled.div`
   width: ${(props) => (props.isOpen ? "300px" : "60px")};
@@ -36,7 +43,7 @@ const SidebarWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  @media ${({ theme }) => theme.media.mobile} {
+  @media ${({ theme }) => theme.media.tablet} {
     position: fixed;
     left: ${(props) => (props.isOpen ? 0 : "-300px")};
     z-index: 3;
@@ -58,7 +65,7 @@ const ToogleBtn = styled.button`
   border: none;
   transition: ${({ theme }) => theme.transition.primary};
   transform: rotate(${(props) => (props.isOpen ? "180deg" : 0)});
-  @media ${({ theme }) => theme.media.mobile} {
+  @media ${({ theme }) => theme.media.tablet} {
     position: fixed;
     top: 10px;
     left: 10px;
@@ -105,7 +112,7 @@ const ListItem = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.hover};
     border-radius: 20px;
   }
-  @media ${({ theme }) => theme.media.mobile} {
+  @media ${({ theme }) => theme.media.tablet} {
     transform: translateX(${(props) => (props.isOpen ? "0" : "-60px")});
     opacity: ${(props) => (props.isOpen ? "1" : "0")};
   }
@@ -183,7 +190,7 @@ const Sidebar = ({ children }) => {
           </List>
         </SidebarWrapper>
       </SidebarContainer>
-      {children}
+      <Content>{children}</Content>
     </PageContainer>
   );
 };

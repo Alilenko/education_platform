@@ -9,9 +9,6 @@ const ScheduleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  max-width: 1055px;
-  min-width: 560px;
 `;
 const Title = styled.h2`
   font-weight: 700;

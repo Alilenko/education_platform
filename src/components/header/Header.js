@@ -10,21 +10,21 @@ const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  @media ${({ theme }) => theme.media.mobile} {
-    width: auto;
-    justify-content: flex-end;
+
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 100vw;
   }
 `;
 
 const HeaderWrapper = styled.div`
   height: 74px;
-  width: 80%;
+  width: 100%;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media ${({ theme }) => theme.media.mobile} {
-    width: 100%;
+
+  @media ${({ theme }) => theme.media.tablet} {
     justify-content: flex-end;
   }
 `;
@@ -34,16 +34,19 @@ const HeaderLeft = styled.div`
   font-size: 22px;
   line-height: 27px;
   letter-spacing: 0.05em;
+  margin-left: 30px;
+  margin-right: 10px;
   color: #020202;
 `;
 const HeaderRight = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.primary};
+  margin-right: 10px;
 `;
 
 const Date = styled.div`
-  @media ${({ theme }) => theme.media.mobile} {
+  @media ${({ theme }) => theme.media.large} {
     display: none;
   }
 `;

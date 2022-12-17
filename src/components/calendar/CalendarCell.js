@@ -9,8 +9,10 @@ export const CellWrapper = styled.div`
   max-width: 151px;
   border: 1px solid
     ${(props) => (props.isWeekday ? ({ theme }) => theme.colors.bg : "#fff")};
-
   background-color: ${(props) => props.isWeekday && "#fff"};
+  @media ${({ theme }) => theme.media.mobile} {
+    height: 80px;
+  }
 `;
 
 export const RowInCell = styled.div`
@@ -65,6 +67,9 @@ const EventsButton = styled.button`
   white-space: nowrap;
   font-size: 16px;
   cursor: pointer;
+  @media ${({ theme }) => theme.media.mobile} {
+    font-size: 10px;
+  }
 `;
 
 const CalendarCell = ({ dayItem, today, setToday, events, setActive }) => {

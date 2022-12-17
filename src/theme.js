@@ -7,6 +7,7 @@ export const baseTheme = {
     bg: "#ededed",
   },
   media: {
+    large: "(max-width: 1020px)",
     tablet: "(max-width: 850px)",
     mobile: "(max-width: 676px)",
   },
