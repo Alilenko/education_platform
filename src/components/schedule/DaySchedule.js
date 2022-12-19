@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import moment from "moment";
 import { useFilterEvents } from "../../hooks/useEvents";
@@ -55,7 +56,7 @@ const EventsWrapper = styled.div`
     min-width: 320px;
   }
 `;
-const EventsItem = styled.a`
+const EventsItem = styled(Link)`
   height: 64px;
   display: flex;
   align-items: center;
@@ -108,7 +109,11 @@ const DaySchedule = ({ today, prevClick, nextClick, events }) => {
         {eventsDay.map((item) => {
           const time = moment.unix(item.date).format("HH:mm");
           return (
-            <EventsItem href={item.link} key={item.id}>
+            <EventsItem
+              id={item.id}
+              to={`/education_platform/lecture/${item.id}`}
+              key={item.id}
+            >
               <EventsTime>{time}</EventsTime>
               <EventsText>{item.title}</EventsText>
             </EventsItem>

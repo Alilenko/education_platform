@@ -152,7 +152,7 @@ const data = [
   {
     name: "Курси",
     icon: <FaGraduationCap size="20px" />,
-    link: "/education_platform/courses",
+    link: "/education_platform/lecture/1",
   },
 ];
 
