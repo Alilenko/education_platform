@@ -9,11 +9,33 @@ import Spinner from "../Spinner/Spinner";
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
+  @media ${({ theme }) => theme.media.tablet} {
+    flex-direction: column;
+  }
 `;
 const VideoItem = styled.div`
   width: 70%;
   position: relative;
-  height: 60vh;
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 100%;
+    height: auto;
+    border-bottom: ${({ theme }) => theme.border.primary};
+  }
+`;
+const Title = styled.div`
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 123.4%;
+  color: #000000;
+  padding: 10px;
+`;
+
+const Descr = styled.div`
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0c0c0c;
+  padding: 10px;
 `;
 const VideoList = styled.div`
   width: 30%;
@@ -21,6 +43,10 @@ const VideoList = styled.div`
   flex-direction: column;
   overflow: auto;
   max-height: 100vh;
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 100%;
+    max-height: 30vh;
+  }
 `;
 
 const LectureDatails = () => {
@@ -49,12 +75,16 @@ const LectureDatails = () => {
             <Spinner />
           </div>
         ) : (
-          <ReactPlayer
-            url={currentEvents?.link}
-            controls
-            height="60vh"
-            width="100%"
-          />
+          <>
+            <ReactPlayer
+              url={currentEvents?.link}
+              controls
+              height="60vh"
+              width="100%"
+            />
+            <Title>{currentEvents?.title}</Title>
+            <Descr>{currentEvents?.description}</Descr>
+          </>
         )}
       </VideoItem>
       <VideoList>

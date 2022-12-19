@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { isCurrentDay, isSelectedMonth } from "../../helpers";
 import { useFilterEvents } from "../../hooks/useEvents";
@@ -74,6 +75,7 @@ const EventsButton = styled.button`
 
 const CalendarCell = ({ dayItem, today, setToday, events, setActive }) => {
   const { eventsDay } = useFilterEvents(events, dayItem);
+  const navigate = useNavigate();
 
   const selectedDay = () => {
     setToday(dayItem);
@@ -99,6 +101,7 @@ const CalendarCell = ({ dayItem, today, setToday, events, setActive }) => {
               lecture={item.type === "lecture"}
               live={item.type === "live"}
               key={i}
+              onClick={() => navigate(`/education_platform/lecture/${item.id}`)}
             >
               {item.title}
             </EventsButton>
